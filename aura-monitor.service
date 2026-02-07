@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor de Temperatura Rise Mode Aura 360mm
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /var/home/alex/.local/bin/aura-monitor.py
+Restart=always
+RestartSec=10
+User=alex
+
+[Install]
+WantedBy=multi-user.target
