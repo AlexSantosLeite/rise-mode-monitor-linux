@@ -92,4 +92,3 @@ Desenvolvido por Alex Santos Leite 🛡️
 2.  **Seção de Distros Atômicas:** Agora o seu "sofrimento" de hoje virou documentação oficial para outros usuários de Bazzite.
 3.  **Comandos do SOC:** Como você trabalha com monitoramento, usar termos como "Logs em tempo real" e "SOC" deixa o projeto com a sua cara.
 4.  **Organização:** Separei bem o que é dependência de sistema do que é configuração do Python.
-5.  
