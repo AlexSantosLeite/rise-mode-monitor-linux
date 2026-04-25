@@ -1,13 +1,18 @@
 [Unit]
-Description=Monitor de Temperatura Rise Mode Aura 360mm
-After=multi-user.target
+Description=Rise Mode Aura Ice Monitor (9800X3D Monitoring)
+After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /var/home/alex/.local/bin/aura-monitor.py
+# Executa como root para garantir acesso ao USB e sensores de hardware
+User=root
+Group=root
+WorkingDirectory=/var/home/Alex/rise-mode-monitor-linux
+# Garante que as libs da venv sejam encontradas pelo Python do sistema
+Environment="PYTHONPATH=/var/home/Alex/rise-mode-monitor-linux/venv/lib/python3.14/site-packages"
+ExecStart=/usr/bin/python3 -u /var/home/Alex/rise-mode-monitor-linux/aura-monitor.py
 Restart=always
 RestartSec=10
-User=alex
 
 [Install]
 WantedBy=multi-user.target
